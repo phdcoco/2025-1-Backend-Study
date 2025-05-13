@@ -10,7 +10,7 @@
 
 또한 관계는 그 특징에 따라 여러 종류로 나뉠 수 있는데,  1:N, N:1, N:N, 1:1일 수 있다. 1:N혹은 N:1은 외래 키로 구현할 수 있다. N:M 관계는 테이블로 구현한다. N과 M 쌍을 저장하는 테이블을 만들면 구현할 수 있다. 예를 들어 이번 과제에서 나온 팔로워와 팔로잉 관계를 보면.
 
-![img1.png](img1.png)
+![pic1.png](pic1.png)
 
 PK인 팔로우 관계 고유 아이디를 이용해 두 N:M 요소를 한 테이블로 묶어 표현할 수 있다. 관계는 같은 종류의 유저 엔티티끼리도 맺을 수 있다.
 
@@ -53,27 +53,27 @@ spring:
 
 코드를 실행하고 [localhost:8080/h2-console에](http://localhost:8080/h2-console에) 접속한 뒤 JDBC URL을 코드에서 설정한 대로 붙여넣어준다.
 
-![img2.png](img2.png)
+![pic2.png](pic2.png)
 
 이제 todoapi안에 todo라는 패키지를 만들고 그 안에 Todo 클래스를 생성한다.
 
 엔티티 클래스는 테이블을, 클래스 필드는 컬럼을 나타낸다.
 
-![img3.png](img3.png)
+![pic3.png](pic3.png)
 
 → JDA가 직접 실행한 SQL의 흔적
 
-![img4.png](img4.png)
+![pic4.png](pic4.png)
 
 다시 콘솔을 보면 테이블과 필드가 추가되어있다.
 
-![img5.png](img5.png)
+![pic5.png](pic5.png)
 
 실행하면 column과 타입이 나오는데, ERD에서 설정한 것과 좀 다르다.
 
 이때는 @Column 어노테이션을 사용하여 컬럼과 타입을 직접 정의할 수 있다.
 
-![img6.png](img6.png)
+![pic6.png](pic6.png)
 
 이렇게 변경할 수 있다.
 
